@@ -7,9 +7,6 @@ create table roles
             unique
 );
 
-alter table roles
-    owner to postgres;
-
 create table users
 (
     id         varchar(255) not null
@@ -22,9 +19,6 @@ create table users
     password   varchar(255)
 );
 
-alter table users
-    owner to postgres;
-
 create table user_role
 (
     user_id varchar(255) not null
@@ -35,18 +29,12 @@ create table user_role
             references roles
 );
 
-alter table user_role
-    owner to postgres;
-
 create table category
 (
     category_id varchar(255) not null
         primary key,
     name        varchar(255)
 );
-
-alter table category
-    owner to postgres;
 
 create table product
 (
@@ -60,6 +48,3 @@ create table product
         constraint fk1mtsbur82frn64de7balymq9s
             references category
 );
-
-alter table product
-    owner to postgres;

@@ -1,1 +1,2 @@
-web: java $JAVA_OPTS -jar target/final-0.0.1-SNAPSHOT.jar
+web: java -Dspring.profiles.active=prod -Dserver.port=$PORT -jar target/final-0.0.1-SNAPSHOT.jar
+
